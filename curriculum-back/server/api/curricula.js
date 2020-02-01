@@ -1,12 +1,12 @@
 const express = require("express");
-const mongoose = require("mongoose");
+require("mongoose");
 
 const { Curriculum } = require("@db");
 
 const router = express.Router();
 
 router.get("/", async function(req, res) {
-  const Curricula = await Curriculum.find()
+  const Curricula = await Curriculum.find();
   // console.log(Curricula)
   res.send(Curricula);
 });
@@ -22,19 +22,22 @@ router.post("/", async function(req, res) {
   });
   await curriculum.save();
   // res.send(201, "Success");
-  res.status(201).send("Success");
+  res.sendStatus(201);
 });
 
-router.get("/:id", function(req, res) {
-  res.send(req.params);
+router.get("/:id", async function(req, res) {
+  const curriculum = await Curriculum.findById(req.params.id);
+  res.send(curriculum);
 });
 
-router.patch("/:id", function(req, res) {
-  res.send("Got a POST request");
+router.patch("/:id", async function(req, res) {
+  await Curriculum.findByIdAndUpdate(req.params.id, req.body);
+  res.sendStatus(204);
 });
 
-router.delete("/:id", function(req, res) {
-  res.send("Got a POST request");
+router.delete("/:id", async function(req, res) {
+  await Curriculum.findByIdAndRemove(req.params.id);
+  res.sendStatus(204);
 });
 
 module.exports = router;
