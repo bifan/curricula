@@ -1,0 +1,22 @@
+{
+  "name": "curriculum-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.8.11",
+    "mongoose-timestamp": "^0.6.0"
+  },
+  "_moduleAliases": {
+    "@db": "db"
+  }
+}
