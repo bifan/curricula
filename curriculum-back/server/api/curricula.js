@@ -12,7 +12,7 @@ router.get("/", async function(req, res) {
 });
 
 router.post("/", async function(req, res) {
-  // console.log(req.body);
+  console.log("req.body---------------", req.body);
   const { name, goal, description, sections } = req.body;
   const curriculum = new Curriculum({
     name,
