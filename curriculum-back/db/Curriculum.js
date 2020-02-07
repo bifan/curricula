@@ -18,8 +18,36 @@ const CurriculumSchema = new mongoose.Schema(
           type: String,
           required: true
         },
-        resources: [String],
-        projects: [String]
+        resources: [
+          {
+            isCompleted: {
+              type: Boolean,
+              default: false
+            },
+            name: {
+              type: String,
+              required: true
+            },
+            url: {
+              type: String
+            }
+          }
+        ],
+        projects: [
+          {
+            isCompleted: {
+              type: Boolean,
+              default: false
+            },
+            name: {
+              type: String,
+              required: true
+            },
+            url: {
+              type: String
+            }
+          }
+        ]
       }
     ]
   },
@@ -27,3 +55,5 @@ const CurriculumSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("Curriculum", CurriculumSchema);
+
+// resources: [(isCompleted: false), (name: ""), (url: "")];

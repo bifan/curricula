@@ -21,29 +21,26 @@
                 {{ section.name }}</v-expansion-panel-header
               >
               <v-expansion-panel-content>
-                <v-list subheader two-line flat>
+                <v-list subheader flat>
                   <v-subheader>Resource</v-subheader>
 
-                  <v-list-item-group multiple>
-                    <v-list-item
-                      v-for="(resource, index) in section.resources"
-                      :key="resource + index"
-                    >
-                      <template v-slot:default="{ active, toggle }">
-                        <v-list-item-action>
-                          <v-checkbox
-                            v-model="active"
-                            color="primary"
-                            @click="toggle"
-                          ></v-checkbox>
-                        </v-list-item-action>
+                  <v-list-item
+                    v-for="(resource, index) in section.resources"
+                    :key="resource + index"
+                    inactive
+                  >
+                    <v-list-item-action>
+                      <v-checkbox color="primary"></v-checkbox>
+                    </v-list-item-action>
 
-                        <v-list-item-content>
-                          <v-list-item-title>{{ resource }}</v-list-item-title>
-                        </v-list-item-content>
-                      </template>
-                    </v-list-item>
-                  </v-list-item-group>
+                    <v-list-item-content>
+                      <v-list-item-title
+                        ><v-btn text to="">{{
+                          resource
+                        }}</v-btn></v-list-item-title
+                      >
+                    </v-list-item-content>
+                  </v-list-item>
                 </v-list>
                 <v-divider></v-divider>
                 <v-list subheader two-line flat>
