@@ -1,8 +1,14 @@
 {
+  "json 文件注释样本//": "注释, comments",
+  "本文件说明": "package.json 是npm 包管理器的配置文件是项目的入口",
   "name": "curricula-front",
   "version": "0.1.0",
   "private": true,
+  "scripts//": "通过npm 运行的shell 脚本, 是启动服务之处, 是万恶之源, 都是时辰的错",
   "scripts": {
+    "serve//1": "启动基于webpack-dev-server 的开发服务",
+    "serve//2": "查看所有配置(巨多)npx vue-cli-service inspect > ~/Desktop/c.js",
+    "serve//3": "查看入口配置npx vue-cli-service inspect entry",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
