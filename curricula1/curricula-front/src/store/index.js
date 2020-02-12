@@ -9,8 +9,17 @@ Vue 不允许动态添加根级响应式属性
 最主要的作用是像函数式编程那样, 事先声明, 能一眼看出依赖
 */
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    drawer: null
+  },
+  mutations: {
+    toggleDrawerStatus(state) {
+      state.drawer = !state.drawer;
+    },
+    setDrawerStatus(state, val) {
+      state.drawer = val;
+    }
+  },
   actions: {},
   modules: {}
 });

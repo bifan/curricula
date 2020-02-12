@@ -22,27 +22,24 @@ Vue.component('c-name', {
       <v-content> 主要内容区域, 其大小会被上面三个组件动态改变
   -->
   <v-app>
+    <VuetifyNavigationDrawer />
     <!-- 不加app 属性会导致v-app-bar 和v-content 均分空间, 加上app 属性则会是预期的保持一个条状空间-->
-    <v-app-bar app>
-      <v-container>
-        <VuetifyAppHeader>{{ appTitle }}</VuetifyAppHeader></v-container
-      >
-    </v-app-bar>
+    <VuetifyAppBar>{{ appTitle }}</VuetifyAppBar>
     <!-- v-content 会动态地调整大小, 使用Vue Router 时将views 放在其中 -->
     <v-content>
       <!-- <router-view> 是Vue Router 的标签, 渲染匹配到的组件, 即Vue Router 加载的组件在此处显示 -->
       <router-view />
     </v-content>
-    <v-footer app
-      ><v-container> <span>👣</span></v-container>
+    <v-footer app>
+      <span>Vue 👣 Vue CLI 👣 VueX 👣 Vue Router 👣 Vuetify</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
 // 组件的代码要在哪里找到, 声明依赖
-import VuetifyAppHeader from "./components/VuetifyAppHeader.vue";
-
+import VuetifyAppBar from "./components/VuetifyAppBar.vue";
+import VuetifyNavigationDrawer from "./components/VuetifyNavigationDrawer.vue";
 /*
 export, 导出当前模块中的东西供其它组件用import 使用, 函数, 对象, 值
 export xxx, 普通多处, 可用多次, export 的名称和import 用时要一模一样(可以用as 命令取别名)
@@ -60,7 +57,8 @@ export default {
   name: "App",
   // 注册局部组件
   components: {
-    VuetifyAppHeader // 使用组件前要注册
+    VuetifyNavigationDrawer,
+    VuetifyAppBar // 使用组件前要注册
   },
   data() {
     return {
