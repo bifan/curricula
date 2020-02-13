@@ -31,15 +31,15 @@ Vue.component('c-name', {
       <router-view />
     </v-content>
     <v-footer app>
-      <span>Vue 👣 Vue CLI 👣 VueX 👣 Vue Router 👣 Vuetify</span>
+      <span>Vue 👣 Vue CLI 👣 Vuex 👣 Vue Router 👣 Vuetify</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
 // 组件的代码要在哪里找到, 声明依赖
-import VuetifyAppBar from "./components/VuetifyAppBar.vue";
-import VuetifyNavigationDrawer from "./components/VuetifyNavigationDrawer.vue";
+import VuetifyAppBar from "@/components/VuetifyAppBar.vue";
+import VuetifyNavigationDrawer from "@/components/VuetifyNavigationDrawer.vue";
 /*
 export, 导出当前模块中的东西供其它组件用import 使用, 函数, 对象, 值
 export xxx, 普通多处, 可用多次, export 的名称和import 用时要一模一样(可以用as 命令取别名)

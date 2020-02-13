@@ -3,6 +3,8 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+import curriculaData from "@/dummy-data/curricula.js";
+
 /*
 Vue 不允许动态添加根级响应式属性
 必须在初始化实例前声明所有根级响应式属性, 哪怕只是一个空值
@@ -10,7 +12,8 @@ Vue 不允许动态添加根级响应式属性
 */
 export default new Vuex.Store({
   state: {
-    drawer: null
+    drawer: null,
+    curriculaData
   },
   mutations: {
     toggleDrawerStatus(state) {
