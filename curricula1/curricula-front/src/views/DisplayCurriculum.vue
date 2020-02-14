@@ -1,7 +1,76 @@
 <template>
   <v-container>
-    <p>DisplayCurriculum.vue</p>
-    <p>{{ curriculum.name }}</p>
+    <h1>{{ curriculum.name }}</h1>
+    <p>{{ curriculum.description }}</p>
+    <v-expansion-panels accordion>
+      <v-expansion-panel
+        v-for="(section, indexSection) in curriculum.sections"
+        :key="section.name + indexSection"
+      >
+        <v-expansion-panel-header
+          >Section {{ indexSection + 1 }} -
+          {{ section.name }}</v-expansion-panel-header
+        >
+        <v-expansion-panel-content>
+          <v-list subheader flat>
+            <v-subheader>Resource</v-subheader>
+
+            <v-list-item
+              v-for="(resource, indexResource) in section.resources"
+              :key="resource + indexResource"
+              inactive
+            >
+              <v-list-item-action>
+                <!-- v-model="resource.isCompleted" -->
+                <v-checkbox
+                  v-model="resource.isCompleted"
+                  @change="toggleCompleted()"
+                  color="primary"
+                ></v-checkbox>
+              </v-list-item-action>
+
+              <v-list-item-content>
+                <v-list-item-title
+                  ><v-btn text :href="resource.url">{{
+                    resource.name
+                  }}</v-btn></v-list-item-title
+                >
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+          <v-divider></v-divider>
+          <v-list subheader two-line flat>
+            <v-subheader>Projects</v-subheader>
+
+            <v-list-item-group multiple>
+              <v-list-item
+                v-for="(project, index) in section.projects"
+                :key="project + index"
+              >
+                <template v-slot:default="{ active, toggle }">
+                  <v-list-item-action>
+                    <!-- v-model="active" -->
+                    <v-checkbox
+                      v-model="project.isCompleted"
+                      color="primary"
+                      @click="toggle"
+                    ></v-checkbox>
+                  </v-list-item-action>
+
+                  <v-list-item-content>
+                    <v-list-item-title
+                      ><v-btn text :to="project.url">{{
+                        project.name
+                      }}</v-btn></v-list-item-title
+                    >
+                  </v-list-item-content>
+                </template>
+              </v-list-item>
+            </v-list-item-group>
+          </v-list>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
   </v-container>
 </template>
 <script>
@@ -17,6 +86,11 @@ export default {
     this.curriculum = this.$store.state.curriculaData.find(curriculum => {
       return curriculum.id === this.$route.params.id;
     });
+  },
+  methods: {
+    toggleCompleted() {
+      this.$store.commit("toggleResourcesCompleted", this.curriculum);
+    }
   }
 };
 </script>

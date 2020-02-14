@@ -1,30 +1,37 @@
+// 修改了数据要重启开发服务器才能生效, 缓存?
 export default [
   {
     id: "3c5c9caf-a912-466c-888f-d729fc9de36d",
-    name: "Roadrunner, greater",
-    goal: "database",
-    description:
-      "Dilation of Left Peroneal Artery, Bifurcation, with Three Drug-eluting Intraluminal Devices, Open Approach",
+    name: "JavaScript 脚本",
+    goal: "Front-end 必须",
+    description: "前端脚本",
     sections: [
       {
         name: "Rank",
-        projects: ["Calculator", "Calculator"],
-        resources: ["Calculator", "Calculator"]
-      },
-      {
-        name: "Stim",
-        projects: ["Calculator"],
-        resources: ["HTML Full Course"]
-      },
-      {
-        name: "Cardify",
-        projects: ["Calculator"],
-        resources: ["HTML Full Course"]
-      },
-      {
-        name: "Tin",
-        projects: ["Calculator"],
-        resources: ["Calculator", "Calculator"]
+        resources: [
+          {
+            name: "学习资源1",
+            url: "https://bifan.io",
+            isCompleted: false
+          },
+          {
+            name: "学习资源2",
+            url: "https://bifan.io",
+            isCompleted: false
+          }
+        ],
+        projects: [
+          {
+            name: "学习计划1",
+            url: "https://bifan.io",
+            isCompleted: false
+          },
+          {
+            name: "学习计划2",
+            url: "https://bifan.io",
+            isCompleted: true
+          }
+        ]
       }
     ],
     createdAt: "23:14",

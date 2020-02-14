@@ -21,6 +21,14 @@ export default new Vuex.Store({
     },
     setDrawerStatus(state, val) {
       state.drawer = val;
+    },
+    toggleResourcesCompleted(state, payload) {
+      const payloadCurriculum = payload;
+      const curriculumIndex = state.curriculaData.findIndex(curriculum => {
+        return curriculum.id === payloadCurriculum.id;
+      });
+      // 为了修改一个项选中状态, 把整个详细页的数据全替换 XD
+      Vue.set(state.curriculaData, curriculumIndex, payloadCurriculum);
     }
   },
   actions: {},

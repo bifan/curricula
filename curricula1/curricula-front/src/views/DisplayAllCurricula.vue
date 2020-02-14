@@ -1,13 +1,13 @@
 <template>
   <v-container>
     <v-card class="mx-auto">
-      <v-toolbar color="cyan" dark>
+      <v-toolbar>
         <v-toolbar-title>All Curricula</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
         <v-btn text>
-          Create new curriculum
+          Create new one
         </v-btn>
       </v-toolbar>
 
