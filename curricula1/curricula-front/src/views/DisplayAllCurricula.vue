@@ -1,31 +1,25 @@
 <template>
-  <v-container>
-    <v-card class="mx-auto">
-      <v-toolbar>
+  <v-container fluid>
+    <v-card>
+      <v-toolbar flat>
         <v-toolbar-title>All Curricula</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
-        <v-btn text>
-          Create new one
+        <v-btn icon to="/CreateNewCurriculum">
+          <v-icon>mdi-plus</v-icon>
         </v-btn>
       </v-toolbar>
 
+      <v-divider></v-divider>
       <v-list three-line>
         <template v-for="curriculum in curriculaData">
-          <v-divider
-            v-if="curriculum.divider"
-            :key="curriculum.id"
-            :inset="item.inset"
-          ></v-divider>
-
           <!--
             属性值包含字符串和变量时, 这两种姿势都行
             :to="'/curriculum/' + curriculum.id"
             :to="`/curriculum/${curriculum.id}`"
           -->
           <v-list-item
-            v-else
             :key="curriculum.title"
             :to="'/DisplayCurriculum/' + curriculum.id"
           >

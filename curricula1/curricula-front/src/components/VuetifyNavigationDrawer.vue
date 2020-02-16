@@ -17,6 +17,14 @@
           <v-list-item-title>All curricula</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+      <v-list-item to="/CreateNewCurriculum">
+        <v-list-item-action>
+          <v-icon>mdi-plus</v-icon>
+        </v-list-item-action>
+        <v-list-item-content>
+          <v-list-item-title>Create new curriculum</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>

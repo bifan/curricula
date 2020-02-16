@@ -13,7 +13,8 @@ Vue 不允许动态添加根级响应式属性
 export default new Vuex.Store({
   state: {
     drawer: null,
-    curriculaData
+    curriculaData,
+    dummyIdCount: 1
   },
   mutations: {
     toggleDrawerStatus(state) {
@@ -29,6 +30,12 @@ export default new Vuex.Store({
       });
       // 为了修改一个项选中状态, 把整个详细页的数据全替换 XD
       Vue.set(state.curriculaData, curriculumIndex, payloadCurriculum);
+    },
+    addCurriculum(state, curriculum) {
+      state.curriculaData.push(curriculum);
+    },
+    incrementDummyIdCount(state) {
+      state.dummyIdCount++;
     }
   },
   actions: {},

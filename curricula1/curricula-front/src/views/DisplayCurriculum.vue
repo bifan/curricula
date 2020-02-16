@@ -21,7 +21,6 @@
               inactive
             >
               <v-list-item-action>
-                <!-- v-model="resource.isCompleted" -->
                 <v-checkbox
                   v-model="resource.isCompleted"
                   @change="toggleCompleted()"
@@ -39,34 +38,30 @@
             </v-list-item>
           </v-list>
           <v-divider></v-divider>
-          <v-list subheader two-line flat>
+          <v-list subheader flat>
             <v-subheader>Projects</v-subheader>
 
-            <v-list-item-group multiple>
-              <v-list-item
-                v-for="(project, index) in section.projects"
-                :key="project + index"
-              >
-                <template v-slot:default="{ active, toggle }">
-                  <v-list-item-action>
-                    <!-- v-model="active" -->
-                    <v-checkbox
-                      v-model="project.isCompleted"
-                      color="primary"
-                      @click="toggle"
-                    ></v-checkbox>
-                  </v-list-item-action>
+            <v-list-item
+              v-for="(project, index) in section.projects"
+              :key="project + index"
+              inactive
+            >
+              <v-list-item-action>
+                <v-checkbox
+                  v-model="project.isCompleted"
+                  @change="toggleCompleted"
+                  color="primary"
+                ></v-checkbox>
+              </v-list-item-action>
 
-                  <v-list-item-content>
-                    <v-list-item-title
-                      ><v-btn text :to="project.url">{{
-                        project.name
-                      }}</v-btn></v-list-item-title
-                    >
-                  </v-list-item-content>
-                </template>
-              </v-list-item>
-            </v-list-item-group>
+              <v-list-item-content>
+                <v-list-item-title
+                  ><v-btn text :to="project.url">{{
+                    project.name
+                  }}</v-btn></v-list-item-title
+                >
+              </v-list-item-content>
+            </v-list-item>
           </v-list>
         </v-expansion-panel-content>
       </v-expansion-panel>
@@ -80,7 +75,7 @@ export default {
       curriculum: null
     };
   },
-  // 组件创建完后获取数据
+  // 生命周期钩子 - 组件创建完后获取数据
   created() {
     // 根据路由中的id 值, 从Vuex 中查询数据
     this.curriculum = this.$store.state.curriculaData.find(curriculum => {

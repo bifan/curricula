@@ -32,6 +32,33 @@ export default [
             isCompleted: true
           }
         ]
+      },
+      {
+        name: "Rank2",
+        resources: [
+          {
+            name: "学习资源1",
+            url: "https://bifan.io",
+            isCompleted: true
+          },
+          {
+            name: "学习资源2",
+            url: "https://bifan.io",
+            isCompleted: false
+          }
+        ],
+        projects: [
+          {
+            name: "学习计划1",
+            url: "https://bifan.io",
+            isCompleted: false
+          },
+          {
+            name: "学习计划2",
+            url: "https://bifan.io",
+            isCompleted: true
+          }
+        ]
       }
     ],
     createdAt: "23:14",
@@ -45,95 +72,34 @@ export default [
       "Plain Radiography of Right Subclavian Vein using High Osmolar Contrast",
     sections: [
       {
-        name: "Prodder",
-        projects: ["Calculator"],
-        resources: ["JavaScript & jQuery Book"]
-      },
-      {
-        name: "Stim",
-        projects: ["Calculator"],
-        resources: ["Calculator", "Calculator"]
-      },
-      {
-        name: "Wrapsafe",
-        projects: ["Calculator"],
-        resources: ["HTML Full Course"]
-      },
-      {
-        name: "Sonsing",
-        projects: ["Calculator"],
-        resources: ["Calculator", "Calculator"]
+        name: "Rank3",
+        resources: [
+          {
+            name: "学习资源1",
+            url: "https://bifan.io",
+            isCompleted: true
+          },
+          {
+            name: "学习资源2",
+            url: "https://bifan.io",
+            isCompleted: false
+          }
+        ],
+        projects: [
+          {
+            name: "学习计划1",
+            url: "https://bifan.io",
+            isCompleted: false
+          },
+          {
+            name: "学习计划2",
+            url: "https://bifan.io",
+            isCompleted: true
+          }
+        ]
       }
     ],
     createdAt: "6:25",
     updatedAt: "22:02"
-  },
-  {
-    id: "468cdd46-d0b4-49c0-9b70-9e431b5b562f",
-    name: "Ovenbird",
-    goal: "contingency",
-    description:
-      "Revision of Spacer in Left Sacroiliac Joint, External Approach",
-    sections: [
-      {
-        name: "Bytecard",
-        projects: ["Calculator"],
-        resources: ["HTML Full Course"]
-      },
-      {
-        name: "Flexidy",
-        projects: ["Calculator"],
-        resources: ["Calculator", "Calculator"]
-      },
-      {
-        name: "Domainer",
-        projects: ["Tic Tac Toe"],
-        resources: ["HTML Full Course"]
-      },
-      { name: "Pannier", projects: ["Calculator"], resources: ["Calculator"] },
-      {
-        name: "Lotstring",
-        projects: ["Calculator"],
-        resources: ["Calculator", "Calculator"]
-      }
-    ],
-    createdAt: "16:11",
-    updatedAt: "6:45"
-  },
-  {
-    id: "3eca5cfb-6543-4706-aa5b-8d84bfdafca5",
-    name: "Greater kudu",
-    goal: "methodology",
-    description:
-      "Revision of Monitoring Device in Spinal Canal, Percutaneous Endoscopic Approach",
-    sections: [
-      {
-        name: "Cardguard",
-        projects: ["Calculator", "Calculator", "Calculator"],
-        resources: ["Calculator", "Calculator"]
-      },
-      {
-        name: "Pannier",
-        projects: ["Calculator"],
-        resources: ["Calculator", "Calculator"]
-      },
-      {
-        name: "Fixflex",
-        projects: ["Calculator"],
-        resources: ["HTML Full Course"]
-      },
-      {
-        name: "Sonair",
-        projects: ["Calculator"],
-        resources: ["Calculator", "Calculator"]
-      },
-      {
-        name: "Tempsoft",
-        projects: ["Calculator"],
-        resources: ["Calculator", "Calculator"]
-      }
-    ],
-    createdAt: "12:24",
-    updatedAt: "13:57"
   }
 ];
