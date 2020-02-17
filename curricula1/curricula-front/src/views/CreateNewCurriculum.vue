@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-form ref="form">
       <v-toolbar elevation="1">
-        <v-toolbar-title>添加新学程</v-toolbar-title>
+        <v-toolbar-title>{{ $t("add") }}</v-toolbar-title>
 
         <v-spacer></v-spacer>
         <DummyFormBtn @dummy="dummyForm" />
@@ -15,7 +15,7 @@
               <v-icon>mdi-content-save</v-icon>
             </v-btn>
           </template>
-          <span>保存</span>
+          <span>{{ $t("save") }}</span>
         </v-tooltip>
       </v-toolbar>
       <!--
@@ -65,3 +65,16 @@ export default {
   }
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "save": "Save",
+    "add": "Add Curriculum"
+  },
+  "zh":{
+    "add": "添加新学程",
+    "save": "保存"
+  }
+}
+</i18n>

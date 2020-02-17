@@ -8,20 +8,29 @@
         :key="sectionIndex"
         class="mt-2"
       >
-        <v-card-title
-          ><span>Sections #{{ sectionIndex + 1 }}</span>
+        <v-card-title>
+          <!-- sectionIndex + 1 表现为拼接字符串, 用 *1 来转换为数字 -->
+          <span>{{ $t("sections") }} #{{ sectionIndex * 1 + 1 }}</span>
           <v-spacer></v-spacer>
           <v-btn icon @click="deleteSection(sectionIndex)">
             <v-icon>mdi-close-circle</v-icon>
           </v-btn></v-card-title
         >
         <v-card-text>
-          <v-text-field label="Name" v-model="section.name"></v-text-field>
-          <v-text-field label="Goal" v-model="section.goal"></v-text-field>
+          <v-text-field
+            :label="$t('name')"
+            v-model="section.name"
+          ></v-text-field>
+          <v-text-field
+            :label="$t('goal')"
+            v-model="section.goal"
+          ></v-text-field>
         </v-card-text>
         <CurriculumSectionInfoResourcesCard v-bind:curSection="section"/>
         <CurriculumSectionInfoProjectsCard v-bind:curSection="section"/></v-card
-      ><v-btn @click="addSection" class="mt-2">Add Section</v-btn></v-col
+      ><v-btn @click="addSection" class="mt-2 text-capitalize">{{
+        $t("addSection")
+      }}</v-btn></v-col
     ></v-row
   >
   <!-- </v-container> -->
@@ -53,3 +62,20 @@ export default {
   }
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "sections": "Sections",
+    "name": "Name",
+    "goal": "Goal",
+    "addSection": "Add Section"
+  },
+  "zh":{
+    "sections": "学习阶段",
+    "name": "阶段名称",
+    "goal": "阶段目标",
+    "addSection": "添加阶段"
+  }
+}
+</i18n>

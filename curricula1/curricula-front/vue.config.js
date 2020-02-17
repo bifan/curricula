@@ -4,7 +4,20 @@
 module.exports = {
   // 默认情况下 babel-loader 会忽略所有 node_modules 中的文件
   // transpileDependencies 可以使得Babel 显式转译一个依赖
-  transpileDependencies: ["vuetify"]
+  transpileDependencies: ["vuetify"],
+
+  // 部署模式==="production" ? 自定义目录 : 根目录
+  // "" 就是使用相对路径
+  publicPath: process.env.NODE_ENV === "production" ? "" : "/",
+
+  pluginOptions: {
+    i18n: {
+      locale: "zh",
+      fallbackLocale: "en",
+      localeDir: "locales",
+      enableInSFC: true
+    }
+  }
 };
 
 /*

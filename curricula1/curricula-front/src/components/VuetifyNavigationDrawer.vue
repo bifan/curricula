@@ -6,7 +6,7 @@
           <v-icon>mdi-home</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title>主页</v-list-item-title>
+          <v-list-item-title>{{ $t("home") }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-list-item to="/DisplayAllCurricula">
@@ -14,7 +14,7 @@
           <v-icon>mdi-format-list-text</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title>学程列表</v-list-item-title>
+          <v-list-item-title>{{ $t("list") }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-list-item to="/CreateNewCurriculum">
@@ -22,7 +22,7 @@
           <v-icon>mdi-plus</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title>添加新学程</v-list-item-title>
+          <v-list-item-title>{{ $t("add") }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -70,3 +70,18 @@ drawer 在较小屏幕打开时会覆盖v-app-bar 的按钮, 这是点击空白�
 
 参考https://stackoverflow.com/questions/47442621/
 -->
+
+<i18n>
+{
+  "en": {
+    "home": "Home",
+    "list": "All Curricula",
+    "add": "Add Curriculum"
+  },
+  "zh":{
+    "home": "主页",
+    "list": "学程列表",
+    "add": "添加新学程"
+  }
+}
+</i18n>

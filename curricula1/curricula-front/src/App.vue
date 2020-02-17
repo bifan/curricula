@@ -24,14 +24,14 @@ Vue.component('c-name', {
   <v-app>
     <VuetifyNavigationDrawer />
     <!-- 不加app 属性会导致v-app-bar 和v-content 均分空间, 加上app 属性则会是预期的保持一个条状空间-->
-    <VuetifyAppBar>{{ appTitle }}</VuetifyAppBar>
+    <VuetifyAppBar>{{ $t("appTitle") }}</VuetifyAppBar>
     <!-- v-content 会动态地调整大小, 使用Vue Router 时将views 放在其中 -->
     <v-content>
       <!-- <router-view> 是Vue Router 的标签, 渲染匹配到的组件, 即Vue Router 加载的组件在此处显示 -->
       <router-view />
     </v-content>
     <v-footer app>
-      <span>Vue 👣 Vue CLI 👣 Vuex 👣 Vue Router 👣 Vuetify</span>
+      <span>Vue 👣 Vue CLI 👣 Vuex 👣 Vue Router 👣 Vuetify 👣 Vue I18n</span>
     </v-footer>
   </v-app>
 </template>
@@ -59,11 +59,17 @@ export default {
   components: {
     VuetifyNavigationDrawer,
     VuetifyAppBar // 使用组件前要注册
-  },
-  data() {
-    return {
-      appTitle: "学程(Curricula)"
-    };
   }
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "appTitle": "Curricula(学程)"
+  },
+  "zh":{
+    "appTitle": "学程(Curricula)"
+  }
+}
+</i18n>

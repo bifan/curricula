@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-banner class="text-center">
-      学程, 是制定学习计划, 跟踪学习进度的应用
+      {{ $t("appIntroduce") }}
     </v-banner>
     <v-sheet
       :color="`${theme.isDark ? 'darken-2' : 'lighten-4'}`"
@@ -26,3 +26,14 @@ export default {
   }
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "appIntroduce": "Make learning curriculum, then keep track of your progress"
+  },
+  "zh":{
+    "appIntroduce": "学程, 是制定学习计划, 跟踪学习进度的应用"
+  }
+}
+</i18n>

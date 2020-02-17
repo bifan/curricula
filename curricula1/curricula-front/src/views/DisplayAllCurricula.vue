@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-card>
       <v-toolbar flat>
-        <v-toolbar-title>学程列表</v-toolbar-title>
+        <v-toolbar-title>{{ $t("list") }}</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
@@ -12,7 +12,7 @@
               <v-icon>mdi-plus</v-icon>
             </v-btn>
           </template>
-          <span>添加新学程</span>
+          <span>{{ $t("add") }}</span>
         </v-tooltip>
       </v-toolbar>
 
@@ -48,3 +48,16 @@ export default {
   computed: mapState(["curriculaData"])
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "list": "All Curricula",
+    "add": "Add Curriculum"
+  },
+  "zh":{
+    "list": "学程列表",
+    "add": "添加新学程"
+  }
+}
+</i18n>

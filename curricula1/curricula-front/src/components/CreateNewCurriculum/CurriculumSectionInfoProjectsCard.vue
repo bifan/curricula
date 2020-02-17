@@ -1,7 +1,7 @@
 <template>
   <v-container class="mt-n3">
     <v-card outlined
-      ><v-subheader>Projects List</v-subheader>
+      ><v-subheader>{{ $t("listName") }}</v-subheader>
       <v-card-text>
         <v-chip
           class="ma-1"
@@ -12,9 +12,9 @@
         >
           {{ project.name }}
         </v-chip>
-        <v-text-field label="Name" v-model="project.name"></v-text-field>
-        <v-text-field label="URL" v-model="project.link"></v-text-field>
-        <v-btn @click="add" class="mt-2">Add</v-btn>
+        <v-text-field :label="$t('name')" v-model="project.name"></v-text-field>
+        <v-text-field :label="$t('url')" v-model="project.link"></v-text-field>
+        <v-btn @click="add" class="mt-2">{{ $t("add") }}</v-btn>
       </v-card-text>
     </v-card>
   </v-container>
@@ -40,3 +40,20 @@ export default {
   }
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "listName": "Projects List",
+    "name": "Name",
+    "url": "URL",
+    "add": "Add"
+  },
+  "zh":{
+    "listName": "练习项目列表",
+    "name": "练习项目名称",
+    "url": "练习项目链接",
+    "add": "添加练习项目"
+  }
+}
+</i18n>

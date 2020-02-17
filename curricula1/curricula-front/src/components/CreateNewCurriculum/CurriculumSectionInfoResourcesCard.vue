@@ -1,7 +1,7 @@
 <template>
   <v-container class="mt-n3">
     <v-card outlined
-      ><v-subheader>Resources List</v-subheader>
+      ><v-subheader>{{ $t("listName") }}</v-subheader>
       <v-card-text>
         <v-chip
           class="ma-1"
@@ -12,9 +12,12 @@
         >
           {{ resource.name }}
         </v-chip>
-        <v-text-field label="Name" v-model="resource.name"></v-text-field>
-        <v-text-field label="URL" v-model="resource.link"></v-text-field>
-        <v-btn @click="add" class="mt-2">Add</v-btn>
+        <v-text-field
+          :label="$t('name')"
+          v-model="resource.name"
+        ></v-text-field>
+        <v-text-field :label="$t('url')" v-model="resource.link"></v-text-field>
+        <v-btn @click="add" class="mt-2">{{ $t("add") }}</v-btn>
       </v-card-text>
     </v-card>
   </v-container>
@@ -40,3 +43,20 @@ export default {
   }
 };
 </script>
+
+<i18n>
+{
+  "en": {
+    "listName": "Resources List",
+    "name": "Name",
+    "url": "URL",
+    "add": "Add"
+  },
+  "zh":{
+    "listName": "资源列表",
+    "name": "资源名称",
+    "url": "资源链接",
+    "add": "添加资源"
+  }
+}
+</i18n>

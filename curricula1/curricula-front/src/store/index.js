@@ -5,6 +5,10 @@ Vue.use(Vuex);
 
 import curriculaData from "@/dummy-data/curricula.js";
 
+// i18n.js 存了语言的状态, vuetify.js 存了主题的状态, 没有理由使用Vuex 再存一遍这俩状态
+// import lang from "./lang.js";
+// import theme from "./theme.js";
+
 /*
 Vue 不允许动态添加根级响应式属性
 必须在初始化实例前声明所有根级响应式属性, 哪怕只是一个空值
@@ -38,8 +42,11 @@ export default new Vuex.Store({
       state.dummyIdCount++;
     }
   },
-  actions: {},
-  modules: {}
+  actions: {}
+  // modules: {
+  //   lang,
+  //   theme
+  // }
 });
 
 /*

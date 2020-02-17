@@ -15,15 +15,23 @@ import store from "@/store";
 import vuetify from "@/plugins/vuetify"; // 不需要后缀名.js
 
 import "@/registerServiceWorker"; // PWA
+import i18n from "./i18n";
 
 // 控制台打印常见问题的帮助信息
 Vue.config.productionTip = true;
 
 new Vue({
   // router 是router: router 的缩写
-  router, // vue-router 是vue的插件, 其使用方式跟普通的vue插件类似都需要按照、插件和注册
-  store, // 把store 对象提供给“store” 选项，这可以把store 的实例注入所有的子组件
-  vuetify, // 插件的知识点在vuetify.js 中注释
+  // vue-router 是vue的插件, 其使用方式跟普通的vue插件类似都需要按照、插件和注册
+  router,
+
+  // 把store 对象提供给“store” 选项，这可以把store 的实例注入所有的子组件
+  store,
+
+  // 插件的知识点在vuetify.js 中注释
+  vuetify,
+
+  i18n,
   render: h => h(App)
 }).$mount("#app"); // #app 是在curricula1\curricula-front\public\index.html 文件中定义的
 
