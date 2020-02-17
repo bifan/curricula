@@ -1,6 +1,6 @@
 <template>
   <!-- dummyObj 可以, dummyObje() 也可以 -->
-  <v-btn x-small @click="dummyObj">dummy</v-btn>
+  <v-btn x-small @click="dummyObj">伪数据</v-btn>
 </template>
 <script>
 export default {

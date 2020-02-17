@@ -6,7 +6,7 @@
           <v-icon>mdi-home</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title>Home</v-list-item-title>
+          <v-list-item-title>主页</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-list-item to="/DisplayAllCurricula">
@@ -14,7 +14,7 @@
           <v-icon>mdi-format-list-text</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title>All curricula</v-list-item-title>
+          <v-list-item-title>学程列表</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
       <v-list-item to="/CreateNewCurriculum">
@@ -22,7 +22,7 @@
           <v-icon>mdi-plus</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title>Create new curriculum</v-list-item-title>
+          <v-list-item-title>添加新学程</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>

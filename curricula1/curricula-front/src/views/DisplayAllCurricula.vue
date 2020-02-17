@@ -2,13 +2,18 @@
   <v-container fluid>
     <v-card>
       <v-toolbar flat>
-        <v-toolbar-title>All Curricula</v-toolbar-title>
+        <v-toolbar-title>学程列表</v-toolbar-title>
 
         <v-spacer></v-spacer>
 
-        <v-btn icon to="/CreateNewCurriculum">
-          <v-icon>mdi-plus</v-icon>
-        </v-btn>
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <v-btn icon to="/CreateNewCurriculum" v-on="on">
+              <v-icon>mdi-plus</v-icon>
+            </v-btn>
+          </template>
+          <span>添加新学程</span>
+        </v-tooltip>
       </v-toolbar>
 
       <v-divider></v-divider>

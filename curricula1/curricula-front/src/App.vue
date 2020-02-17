@@ -62,7 +62,7 @@ export default {
   },
   data() {
     return {
-      appTitle: "Curricula 学程"
+      appTitle: "学程(Curricula)"
     };
   }
 };

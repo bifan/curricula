@@ -2,15 +2,21 @@
   <v-container fluid>
     <v-form ref="form">
       <v-toolbar elevation="1">
-        <v-toolbar-title>New Curriculum</v-toolbar-title>
+        <v-toolbar-title>添加新学程</v-toolbar-title>
 
         <v-spacer></v-spacer>
         <DummyFormBtn @dummy="dummyForm" />
 
         <!-- <v-btn text @click="dummyForm()">dummy</v-btn> -->
-        <v-btn icon @click="submit">
-          <v-icon>mdi-content-save</v-icon>
-        </v-btn>
+
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <v-btn icon @click="submit" v-on="on">
+              <v-icon>mdi-content-save</v-icon>
+            </v-btn>
+          </template>
+          <span>保存</span>
+        </v-tooltip>
       </v-toolbar>
       <!--
         在<CurriculumBasicInfoCard> 内部, $parent 指的是<v-form>, 所以要用$parent.$parent 才能按预期得到值, 这要是后期重构嵌套更多蛋疼了, 弃 QAQ

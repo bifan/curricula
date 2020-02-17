@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-banner class="text-center">
-      主页- 介绍应用的页面
+      学程, 是制定学习计划, 跟踪学习进度的应用
     </v-banner>
     <v-sheet
       :color="`${theme.isDark ? 'darken-2' : 'lighten-4'}`"
