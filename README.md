@@ -8,3 +8,5 @@ Vuejs Nodejs 系的练习项目, 可以用来制定学习计划和记录进度
 ### 目录:
 - curricula0 是第一遍, 跟写, 有后端
 - curricula1 是第二遍, 加深理解, 自己改动, 部署到自己网站的一版, 没有后端
+
+[过程记录 - Notion 笔记](https://www.notion.so/55fac938a2bf40b09a05d2e6511c034c)
