@@ -14,7 +14,7 @@ import router from "@/router"; // 路径名是个目录时, 约定加载目录�
 import store from "@/store";
 import vuetify from "@/plugins/vuetify"; // 不需要后缀名.js
 
-import "@/registerServiceWorker"; // PWA
+// import "@/registerServiceWorker"; // PWA
 import i18n from "./i18n";
 
 // 控制台打印常见问题的帮助信息
