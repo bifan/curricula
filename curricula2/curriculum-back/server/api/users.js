@@ -12,6 +12,7 @@ const router = express.Router()
 
 router.route('/:id/curricula')
   .get(async (req, res) => {
+    console.log(`(●'◡'●) → users.js → router.route('/:id/curricula').get()`)
     const userId = req.params.id
     const curricula = await Curriculum.find({ createdBy: userId })
     res.send(curricula)
@@ -19,6 +20,7 @@ router.route('/:id/curricula')
 
 router.route('/:id/update-password')
   .post(async (req, res) => {
+    console.log(`(●'◡'●) → users.js → router.route('/:id/update-password').post()`)
     const { oldPassword, newPassword } = req.body
 
     if (newPassword.length >= 8) {
@@ -41,11 +43,13 @@ router.route('/:id/update-password')
 
 router.route('/:id')
   .get(async (req, res) => {
+    console.log(`(●'◡'●) → users.js → router.route('/:id').get()`)
     const userId = req.params.id
     const user = await User.findById(userId)
     res.send(user)
   })
   .patch(async (req, res) => {
+    console.log(`(●'◡'●) → users.js → router.route('/:id').patch()`)
     const userId = req.params.id
     const { username, email } = req.body
 
@@ -59,11 +63,13 @@ router.route('/:id')
     res.send(201)
   })
   .delete(async (req, res) => {
+    console.log(`(●'◡'●) → users.js → router.route('/:id').delete()`)
 
   })
 
 router.route('/')
   .get(async (req, res) => {
+    console.log(`(●'◡'●) → users.js → router.route('/').get()`)
     const users = await User.find()
     res.send(users)
   })

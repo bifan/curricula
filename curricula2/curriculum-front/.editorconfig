@@ -1,5 +1,14 @@
+# 针对的文件类型
 [*.{js,jsx,ts,tsx,vue}]
+# 缩进姿势
 indent_style = space
 indent_size = 2
+# 删除换行符之前所有空白字符
 trim_trailing_whitespace = true
+# 文件保存时以换行符结尾
 insert_final_newline = true
+
+# https://editorconfig.org/
+# 跨IDEs 配置文件, 配置编码风格, editorCongif 会借助插件什么的自动把编辑器配置好
+# VS Code 插件 → EditorConfig for VS Code
+# 主要用来统一缩进风格
